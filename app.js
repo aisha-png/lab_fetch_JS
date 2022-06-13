@@ -39,11 +39,11 @@ fetch("https://restcountries.com/v2/all")// + countryName
     function initialise(countriesData) {
         countries = countriesData;
         let options = "";
-        // for (let i=0; i<countries.length; i++){
+        for (let i=0; i<countries.length; i++){
         //     // options += `<option value="${countries[i].alpha3Code}">${countries[i].name}</option>`;
-        //     // options += `<option value="${countries[i].alpha3Code}">${countries[i].name}</option>`;
-        //     countries.forEach(country => options += `<option value="${countries[i].alpha3Code}">${countries[i].name}</option>`)
-        // }
+            options += `<option value="${countries[i].alpha3Code}">${countries[i].name}</option>`;
+            // countries.forEach(country => options += `<option value="${countries[i].alpha3Code}">${countries[i].name}</option>`);
+        }
         // document.getElementById("countries").innerHTML = options;
         // document.querySelector("#countries").innerHTML = options;
         countriesList.innerHTML = options;
